@@ -1,0 +1,47 @@
+/*
+polls/static/polls/pollstyle.css
+you can refer to this static file in Django as polls/pollstyle.css
+ */
+body {
+    background-color: #C43EAF;
+    }
+
+a:link {
+ text-decoration: none;
+ color: green;
+}
+
+.h1 {
+    color: #004d40;
+}
+.h3 {
+    color: darkgray;
+    }
+
+li {
+    list-style-type:square;
+}
+li a {
+    color: black;
+    text-decoration: none;
+    }
+
+#options{
+    background-color: #D1E7DD;
+    margin-left: 15px;
+    height: 1024px%;
+    color: green;
+    }
+
+#mainimg {
+    margin-top: 50px;
+    width: 90%;
+    height: auto;
+    }
+#admin {
+    overflow: hidden;
+    position: fixed; /* Set the element to fixed position */
+    top: 10;
+    right: 10px;
+}
+

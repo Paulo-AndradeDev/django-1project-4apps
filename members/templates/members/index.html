@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Members App - Index Page</title>
+    {% include './extends/head_ext.html' %}
+
+</head>
+<body>
+
+{% include './extends/header_ext.html' %}
+
+
+<div class="row">
+
+  <div class="col-sm-6 p-4" >
+
+    <div id='options' class="container p-5 my-5 text-dark border border-1 rounded">
+        <h2><b>Your Team Members </b></h2>
+
+        <!-- code starts-->
+ <div class="container mt-3">
+      <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+
+
+        {% for x in mymembers %}
+
+        <tr>
+            <td>{{ x.firstname }}</td>
+            <td>{{ x.lastname }}</td>
+            <td>
+                <a href="update/{{ x.id }}">
+                    <span id="ico" class="material-symbols-outlined">
+                        edit
+                    </span>
+                </a>
+            </td>
+            <td>
+                <a href="delete/{{ x.id }}">
+                    <span id="ico" class="material-symbols-outlined">
+                        delete
+                    </span>
+                </a>
+            </td>
+          </tr>
+        {% endfor %}
+     </tbody>
+  </table>
+</div>
+    <center>
+        <p>
+            <br>
+        <a href="add/" class="btn btn-outline-dark" >+ Add member</a>
+        </p>
+        <br>
+    </center>
+        <!-- code ends-->
+    </div>
+  </div>
+
+  <div class="col-sm-5">
+      {% include './extends/img_ext.html' %}
+      {% include './extends/info_ext.html' %}
+  </div>
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

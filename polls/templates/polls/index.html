@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polls App - Index Page</title>
+    {% include './extends/head_ext.html' %}
+
+</head>
+<body>
+
+{% include './extends/header_ext.html' %}
+
+<div class="row">
+
+  <div class="col-sm-6 p-4" >
+
+    <div id='options' class="container p-5 my-5 text-primary border border-1 rounded">
+        <p><b>Current topics in voting</b></p>
+       {% if latest_question_list %}
+        <ul style="list-style-type:square;">
+         {% for question in latest_question_list %}
+          <!-- Button to Open the Modal -->
+           <a href="{% url 'polls:detail' question.id %}">
+             <li>{{ question.question_text }}</li>
+           </a>
+           <br>
+         {% endfor %}
+
+       {% else %}
+            <li>No polls are available.</li>
+            <ul
+            <br>
+       {% endif %}
+    </div>
+
+  </div>
+
+  <div class="col-sm-5">
+      {% include './extends/img_ext.html' %}
+
+      {% include './extends/info_ext.html' %}
+
+  </div>
+
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

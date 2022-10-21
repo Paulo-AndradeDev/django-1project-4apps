@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>results</title>
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+    {% include './extends/head_ext.html' %}
+</head>
+<body>
+
+{% include './extends/header_ext.html' %}
+
+<div class="row">
+
+  <div class="col-sm-6 p-4">
+    <div id='options' class="container p-5 my-5 text-primary border border-1 rounded">
+      <h1>{{ question.question_text }}</h1>
+
+        <ul>
+        {% for choice in question.choice_set.all %}
+            <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+        {% endfor %}
+        </ul>
+
+        <a href="{% url 'polls:detail' question.id %}" class="btn btn-primary">Vote again?</a>
+
+        <br>
+       <center>
+       <p><a href="{% url 'polls:index' %}">Return to Home</a></p>
+       </center>
+
+  </div>
+  </div>
+  <div class="col-sm-5">
+      {% include './extends/img_ext.html' %}
+
+      {% include './extends/info_ext.html' %}
+
+  </div>
+
+
+
+</div>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+</body>
+</html>

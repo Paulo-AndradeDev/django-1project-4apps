@@ -1,0 +1,25 @@
+
+
+
+
+<div class="container-fluid">
+    <a href="http://127.0.0.1:8000/admin/">
+      <span id="admin"
+            class="material-symbols-outlined"
+            data-bs-toggle="tooltip"
+            title="Go to Admin Panel">
+        settings
+      </span>
+    </a>
+</div>
+<script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+</script>
+
+<div class="container-fluid p-4 text-center">
+    <p class="h1">Team Membership Web Application</p>
+    <p class="h3">manage your team with Django & Python</p>
+</div>

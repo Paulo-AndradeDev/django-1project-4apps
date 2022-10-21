@@ -1,0 +1,56 @@
+/*
+polls/static/polls/pollstyle.css
+you can refer to this static file in Django as polls/pollstyle.css
+ */
+body {
+    background-color: #C43EAF;
+    }
+
+a:link {
+ text-decoration: none;
+}
+
+.h1 {
+    color: #BB2D3B;
+    text-shadow: 1px 1px 2px #eceff1 ;
+    font-family: 'Paytone One', sans-serif;
+}
+.h5 {
+    color: darkgray;
+    }
+
+li {
+    list-style-type:square;
+}
+li a {
+    color: black;
+    text-decoration: none;
+    }
+
+#options{
+    background-color: #e8eaf6;
+    margin-left: 15px;
+    height: 1024px%;
+    }
+
+#mainimg {
+    margin-top: 50px;
+    width: 90%;
+    height: auto;
+    }
+#admin {
+    overflow: hidden;
+    position: fixed; /* Set the element to fixed position */
+    top: 10;
+    right: 10px;
+}
+
+#project {
+     border: 1px solid;
+     padding: 10px;
+     box-shadow: 5px 10px red;
+}
+
+.card-title {
+    color: #880e4f;
+    }

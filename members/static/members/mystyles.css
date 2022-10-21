@@ -1,0 +1,65 @@
+body {
+    background-color: #C43EAF;
+    }
+
+a:link {
+ text-decoration: none;
+}
+
+.h1 {
+    color: #ad1457;
+}
+.h3 {
+    color: #90a4ae;
+    }
+
+li {
+    list-style-type:square;
+}
+li a {
+    color: black;
+    text-decoration: none;
+    }
+
+#options{
+    background-color: #ff8a80 ;
+    margin-left: 15px;
+    height: 1024px%;
+    }
+
+#mainimg {
+    margin-top: 50px;
+    width: 90%;
+    height: auto;
+    }
+
+#ico {
+    fill: white;
+    }
+
+#ico a:link {
+    color: white;
+
+    }
+
+#ico a:hover {
+    color: white;
+
+    }
+
+#ico a:active {
+    color: white;
+
+    }
+
+#ico a:visited {
+    color: white;
+
+    }
+
+#admin {
+    overflow: hidden;
+    position: fixed; /* Set the element to fixed position */
+    top: 10;
+    right: 10px;
+}
